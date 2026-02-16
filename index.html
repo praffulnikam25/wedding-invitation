@@ -5,109 +5,110 @@
   <title>Shivangi ❤️ Prafful</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Cinzel:wght@500&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Tiro Devanagari Marathi', serif;
+      font-family: 'Playfair Display', serif;
+      background: #5a0f1c;
+      color: #d4af37;
       text-align: center;
-      background: linear-gradient(to bottom, #fff3b0, #ffe066);
-      color: #7a1c1c;
       overflow-x: hidden;
     }
 
-    .border-top, .border-bottom {
-      height: 40px;
-      background: url('https://www.transparenttextures.com/patterns/gold-scale.png');
-    }
-
-    .hero {
+    .container {
       padding: 100px 20px;
-      animation: fadeIn 2s ease-in;
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 52px;
+      font-size: 56px;
       margin: 0;
-      color: #b22222;
+      letter-spacing: 2px;
     }
 
     .subtitle {
+      font-family: 'Cinzel', serif;
       font-size: 20px;
-      margin-top: 10px;
+      margin-top: 15px;
+      color: #f5d76e;
     }
 
     .date {
-      font-size: 22px;
-      margin-top: 20px;
+      margin-top: 30px;
+      font-size: 24px;
       font-weight: bold;
+    }
+
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: #d4af37;
+      margin: 30px auto;
     }
 
     .countdown {
       font-size: 18px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .section {
       padding: 60px 20px;
+      background: #4a0d17;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 25px;
-      background: #b22222;
-      color: white;
+      padding: 12px 28px;
+      background: #d4af37;
+      color: #5a0f1c;
       text-decoration: none;
       border-radius: 30px;
-      margin-top: 20px;
+      margin-top: 30px;
+      font-weight: bold;
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: #8b0000;
+      background: #f5d76e;
     }
 
     footer {
       padding: 20px;
-      background: #fff0c2;
+      background: #3a0911;
       font-size: 14px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      color: #c9a227;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="border-top"></div>
+  <div class="container">
+    <h1>Shivangi ❤️ Prafful</h1>
+    <div class="subtitle">With the Blessings of Our Families</div>
 
-  <div class="hero">
-    <h1>शिवांगी ❤️ प्रफुल</h1>
-    <div class="subtitle">With blessings of our families</div>
-    <div class="date">१५ मार्च २०२६</div>
+    <div class="divider"></div>
+
+    <div class="date">15th March 2026</div>
     <div class="countdown" id="countdown"></div>
   </div>
 
   <div class="section">
-    <h2>आपण सस्नेह आमंत्रित आहात</h2>
-    <p>आमच्या विवाह सोहळ्यास उपस्थित राहून शुभाशीर्वाद द्यावा ही नम्र विनंती.</p>
+    <h2>You Are Cordially Invited</h2>
+    <p>To celebrate the sacred union of our marriage</p>
 
-    <p><strong>स्थळ:</strong> Drupati Lawns</p>
+    <div class="divider"></div>
+
+    <p><strong>Venue:</strong> Drupati Lawns</p>
 
     <a href="https://www.google.com/maps/search/?api=1&query=Drupati+Lawns"
-       target="_blank" class="btn">स्थळ पाहा</a>
+       target="_blank" class="btn">View Location</a>
   </div>
 
   <footer>
-    मंगल विवाह सोहळा 💛
+    A Royal Celebration Awaits 💛
   </footer>
-
-  <div class="border-bottom"></div>
 
   <script>
     const weddingDate = new Date("March 15, 2026 00:00:00").getTime();
@@ -122,96 +123,15 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       document.getElementById("countdown").innerHTML =
-        days + " दिवस " + hours + " तास " +
-        minutes + " मिनिटे " + seconds + " सेकंद ";
+        days + " Days " + hours + " Hours " +
+        minutes + " Minutes " + seconds + " Seconds ";
 
       if (distance < 0) {
         clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "💍 विवाह संपन्न झाला!";
+        document.getElementById("countdown").innerHTML = "💍 We Are Married!";
       }
     }, 1000);
   </script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Wedding Invitation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      background: #fff8f5;
-      color: #333;
-    }
-
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: linear-gradient(to bottom, #ffe6e6, #fff);
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin: 0;
-    }
-
-    .date {
-      font-size: 20px;
-      margin-top: 15px;
-    }
-
-    .section {
-      padding: 60px 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #e63946;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      margin-top: 20px;
-    }
-
-    footer {
-      padding: 20px;
-      background: #f1f1f1;
-      font-size: 14px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="hero">
-    <h1>Bride Name ❤️ Groom Name</h1>
-    <div class="date">Save the Date — 12 December 2026</div>
-  </div>
-
-  <div class="section">
-    <h2>You're Invited</h2>
-    <p>With the blessings of our families, we invite you to celebrate our wedding.</p>
-    <p>📍 Venue: Grand Palace, Your City</p>
-    <p>⏰ Time: 6:00 PM onwards</p>
-
-    <a href="#" class="btn">RSVP Coming Soon</a>
-  </div>
-
-  <footer>
-    Made with ❤️ for our special day
-  </footer>
 
 </body>
 </html>
