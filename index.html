@@ -2,6 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Shivangi ❤️ Prafful</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tiro Devanagari Marathi', serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #fff3b0, #ffe066);
+      color: #7a1c1c;
+      overflow-x: hidden;
+    }
+
+    .border-top, .border-bottom {
+      height: 40px;
+      background: url('https://www.transparenttextures.com/patterns/gold-scale.png');
+    }
+
+    .hero {
+      padding: 100px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      margin: 0;
+      color: #b22222;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .date {
+      font-size: 22px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .countdown {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #b22222;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #8b0000;
+    }
+
+    footer {
+      padding: 20px;
+      background: #fff0c2;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="border-top"></div>
+
+  <div class="hero">
+    <h1>शिवांगी ❤️ प्रफुल</h1>
+    <div class="subtitle">With blessings of our families</div>
+    <div class="date">१५ मार्च २०२६</div>
+    <div class="countdown" id="countdown"></div>
+  </div>
+
+  <div class="section">
+    <h2>आपण सस्नेह आमंत्रित आहात</h2>
+    <p>आमच्या विवाह सोहळ्यास उपस्थित राहून शुभाशीर्वाद द्यावा ही नम्र विनंती.</p>
+
+    <p><strong>स्थळ:</strong> Drupati Lawns</p>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=Drupati+Lawns"
+       target="_blank" class="btn">स्थळ पाहा</a>
+  </div>
+
+  <footer>
+    मंगल विवाह सोहळा 💛
+  </footer>
+
+  <div class="border-bottom"></div>
+
+  <script>
+    const weddingDate = new Date("March 15, 2026 00:00:00").getTime();
+
+    const countdownFunction = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        days + " दिवस " + hours + " तास " +
+        minutes + " मिनिटे " + seconds + " सेकंद ";
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "💍 विवाह संपन्न झाला!";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <title>Wedding Invitation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
