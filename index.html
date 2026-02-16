@@ -2,175 +2,198 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prafful & Shivangi</title>
+<title>Shivangi & Prafful</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-  html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #ffffff;
-    color: #111;
-  }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  background: #fff;
+  overflow-x: hidden;
+}
 
-  section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-    text-align: center;
-  }
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  .hero {
-    background: #f5f5f7;
-  }
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  url('https://images.unsplash.com/photo-1529634894291-7d0b1b7e6d1e') center/cover no-repeat;
+  color: white;
+}
 
-  h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 72px;
-    font-weight: 600;
-    margin: 0;
-    letter-spacing: -1px;
-  }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  margin: 0;
+}
 
-  .sub {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #666;
-  }
+.sub {
+  margin-top: 20px;
+  font-size: 18px;
+}
 
-  .date {
-    margin-top: 30px;
-    font-size: 22px;
-    font-weight: 400;
-  }
+.date {
+  margin-top: 20px;
+  font-size: 22px;
+}
 
-  .countdown {
-    margin-top: 25px;
-    font-size: 18px;
-    color: #444;
-  }
+.btn {
+  margin-top: 30px;
+  padding: 14px 40px;
+  border-radius: 40px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
 
-  .details {
-    background: #ffffff;
-  }
+.btn:hover {
+  background: white;
+  color: black;
+}
 
-  .details h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
+.events {
+  background: #f5f5f7;
+}
 
-  .location {
-    font-size: 20px;
-    margin-top: 20px;
-  }
+.event-box {
+  margin: 20px 0;
+}
 
-  .btn {
-    margin-top: 40px;
-    padding: 14px 40px;
-    border-radius: 40px;
-    border: 1px solid #111;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: #111;
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
+.event-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+}
 
-  .btn:hover {
-    background: #111;
-    color: white;
-  }
+.rsvp-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
 
-  footer {
-    padding: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
-    background: #f5f5f7;
-  }
+.rsvp-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+}
 
-  .fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease;
-  }
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
-  .fade.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 18px;
+}
 </style>
 </head>
 
 <body>
 
-<section class="hero fade">
+<!-- HERO -->
+<section class="hero">
   <h1>Shivangi & Prafful</h1>
   <div class="sub">Together with their families</div>
   <div class="date">15 March 2026</div>
-  <div class="countdown" id="countdown"></div>
+  <button class="btn" onclick="openRSVP()">RSVP</button>
 </section>
 
-<section class="details fade">
-  <h2>Wedding Celebration</h2>
-  <div class="location">
-    Drupati Lawns
+<!-- EVENTS -->
+<section class="events">
+  <div class="event-box">
+    <h2>Haldi Ceremony</h2>
+    <p>14 March 2026 - Morning</p>
+  </div>
+
+  <div class="event-box">
+    <h2>Wedding Ceremony</h2>
+    <p>15 March 2026</p>
+  </div>
+
+  <div class="event-box">
+    <h2>Reception</h2>
+    <p>15 March 2026 - Evening</p>
   </div>
 
   <a href="https://www.google.com/maps/search/?api=1&query=Drupati+Lawns"
-     target="_blank" class="btn">VIEW LOCATION</a>
+     target="_blank" style="margin-top:40px; display:inline-block; color:black; text-decoration:underline;">
+     View Location
+  </a>
 </section>
 
-<footer>
-  A celebration of love, forever begins here.
-</footer>
+<!-- RSVP MODAL -->
+<div class="rsvp-modal" id="rsvpModal">
+  <div class="rsvp-content">
+    <h2>RSVP</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="number" placeholder="Number of Guests">
+    <textarea placeholder="Message"></textarea>
+    <button onclick="closeRSVP()">Submit</button>
+  </div>
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
 
 <script>
-  const weddingDate = new Date("March 15, 2026 00:00:00").getTime();
+function openRSVP() {
+  document.getElementById("rsvpModal").style.display = "flex";
+}
 
-  setInterval(function() {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
+function closeRSVP() {
+  document.getElementById("rsvpModal").style.display = "none";
+}
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+let music = document.getElementById("bgMusic");
+let isPlaying = false;
 
-    document.getElementById("countdown").innerHTML =
-      days + " Days " + hours + " Hours " +
-      minutes + " Minutes " + seconds + " Seconds ";
-
-  }, 1000);
-
-  // Smooth fade-in on scroll
-  const faders = document.querySelectorAll('.fade');
-
-  const appearOptions = {
-    threshold: 0.2
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+function toggleMusic() {
+  if (isPlaying) {
+    music.pause();
+  } else {
+    music.play();
+  }
+  isPlaying = !isPlaying;
+}
 </script>
 
 </body>
