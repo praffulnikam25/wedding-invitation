@@ -1,160 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shivangi & Prafful</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Shivangi & Prafful</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+  html { scroll-behavior: smooth; }
 
-    body {
-      margin: 0;
-      background: #f8f5f1;
-      color: #2b2b2b;
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
-    }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111;
+  }
 
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-                  url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1974&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 20px;
-    }
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+  }
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 70px;
-      margin: 0;
-      letter-spacing: 3px;
-    }
+  .hero {
+    background: #f5f5f7;
+  }
 
-    .tagline {
-      margin-top: 20px;
-      font-size: 18px;
-      letter-spacing: 3px;
-      opacity: 0.9;
-    }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -1px;
+  }
 
-    .date {
-      margin-top: 30px;
-      font-size: 24px;
-      letter-spacing: 2px;
-    }
+  .sub {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+  }
 
-    .countdown {
-      margin-top: 25px;
-      font-size: 18px;
-    }
+  .date {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 400;
+  }
 
-    .section {
-      padding: 100px 20px;
-      background: white;
-    }
+  .countdown {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #444;
+  }
 
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+  .details {
+    background: #ffffff;
+  }
 
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: #c8a96a;
-      margin: 20px auto;
-    }
+  .details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
 
-    .event-card {
-      margin-top: 40px;
-      font-size: 18px;
-    }
+  .location {
+    font-size: 20px;
+    margin-top: 20px;
+  }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 35px;
-      border: 1px solid #c8a96a;
-      color: #c8a96a;
-      text-decoration: none;
-      letter-spacing: 2px;
-      transition: 0.3s;
-    }
+  .btn {
+    margin-top: 40px;
+    padding: 14px 40px;
+    border-radius: 40px;
+    border: 1px solid #111;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
 
-    .btn:hover {
-      background: #c8a96a;
-      color: white;
-    }
+  .btn:hover {
+    background: #111;
+    color: white;
+  }
 
-    footer {
-      padding: 40px;
-      font-size: 14px;
-      color: #777;
-      background: #f1ede7;
-    }
-  </style>
+  footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    background: #f5f5f7;
+  }
+
+  .fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+  }
+
+  .fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <h1>Shivangi & Prafful</h1>
-    <div class="tagline">Together with their families</div>
-    <div class="date">15 March 2026</div>
-    <div class="countdown" id="countdown"></div>
+<section class="hero fade">
+  <h1>Shivangi & Prafful</h1>
+  <div class="sub">Together with their families</div>
+  <div class="date">15 March 2026</div>
+  <div class="countdown" id="countdown"></div>
+</section>
+
+<section class="details fade">
+  <h2>Wedding Celebration</h2>
+  <div class="location">
+    Drupati Lawns
   </div>
 
-  <div class="section">
-    <h2>Wedding Celebration</h2>
-    <div class="divider"></div>
+  <a href="https://www.google.com/maps/search/?api=1&query=Drupati+Lawns"
+     target="_blank" class="btn">VIEW LOCATION</a>
+</section>
 
-    <div class="event-card">
-      <strong>Wedding Ceremony</strong><br>
-      15 March 2026<br>
-      Drupati Lawns
-    </div>
+<footer>
+  A celebration of love, forever begins here.
+</footer>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=Drupati+Lawns"
-       target="_blank" class="btn">VIEW LOCATION</a>
-  </div>
+<script>
+  const weddingDate = new Date("March 15, 2026 00:00:00").getTime();
 
-  <footer>
-    A celebration of love, laughter & happily ever after.
-  </footer>
+  setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-  <script>
-    const weddingDate = new Date("March 15, 2026 00:00:00").getTime();
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const countdownFunction = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
+    document.getElementById("countdown").innerHTML =
+      days + " Days " + hours + " Hours " +
+      minutes + " Minutes " + seconds + " Seconds ";
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  }, 1000);
 
-      document.getElementById("countdown").innerHTML =
-        days + " Days " + hours + " Hours " +
-        minutes + " Minutes " + seconds + " Seconds ";
+  // Smooth fade-in on scroll
+  const faders = document.querySelectorAll('.fade');
 
-      if (distance < 0) {
-        clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "We Are Married 💍";
-      }
-    }, 1000);
-  </script>
+  const appearOptions = {
+    threshold: 0.2
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 
 </body>
 </html>
