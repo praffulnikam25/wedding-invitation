@@ -6,13 +6,13 @@
 <title>Prafful & Shivangi — Wedding Invitation | March 15, 2026</title>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Join us in celebrating the wedding of Prafful & Shivangi on March 15, 2026 at Drupati Lawns, Vaijapur. With the divine grace of Lord Ganesha & blessings of our parents.">
+<meta name="description" content="Join us in celebrating the wedding of Prafful & Shivangi on March 15, 2026 at Droupadi Lawns, Vaijapur. With the divine grace of Lord Ganesha & blessings of our parents.">
 <meta name="keywords" content="wedding invitation, Prafful Shivangi wedding, March 2026 wedding, Indian wedding, Vaijapur wedding">
 <meta name="author" content="Prafful & Shivangi">
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="Prafful & Shivangi Wedding Invitation">
-<meta property="og:description" content="Join us in celebrating our special day on March 15, 2026 at Drupati Lawns, Vaijapur">
+<meta property="og:description" content="Join us in celebrating our special day on March 15, 2026 at Droupadi Lawns, Vaijapur">
 <meta property="og:image" content="photo/Image (16).jpeg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="">
@@ -415,7 +415,29 @@ body {
 .couple-section {
   padding: 100px 0;
   position: relative;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: 
+    linear-gradient(135deg, rgba(43, 43, 43, 0.75) 0%, rgba(201, 169, 110, 0.35) 50%, rgba(43, 43, 43, 0.75) 100%),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+    url('photo/Image (16).jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.couple-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(201, 169, 110, 0.15), transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(201, 169, 110, 0.15), transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.couple-section .couple-container {
+  position: relative;
+  z-index: 2;
 }
 
 .couple-container {
@@ -566,20 +588,26 @@ body {
 /* Family Section - Modern Card Template */
 .family-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, #f8f6f4 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
+  background: 
+    linear-gradient(135deg, rgba(43, 43, 43, 0.75) 0%, rgba(201, 169, 110, 0.35) 50%, rgba(43, 43, 43, 0.75) 100%),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+    url('photo/Image (16).jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .family-section::before {
   content: '';
   position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(201, 169, 110, 0.08), transparent);
-  border-radius: 50%;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(201, 169, 110, 0.15), transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(201, 169, 110, 0.15), transparent 50%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .family-section::after {
@@ -598,7 +626,7 @@ body {
   margin: 0 auto;
   padding: 0 60px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .family-header {
@@ -610,7 +638,7 @@ body {
   font-size: 12px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #D4AF7A;
   margin-bottom: 16px;
   font-weight: 600;
 }
@@ -619,14 +647,15 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(40px, 6vw, 64px);
   font-weight: 600;
-  color: var(--charcoal);
+  color: white;
   line-height: 1.2;
   margin-bottom: 20px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .family-description {
   font-size: 16px;
-  color: var(--text-gray);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -1562,6 +1591,7 @@ section {
   
   .couple-section {
     padding: 60px 0;
+    background-attachment: scroll;
   }
   
   .couple-container {
@@ -1585,6 +1615,7 @@ section {
   
   .family-section {
     padding: 60px 0;
+    background-attachment: scroll;
   }
   
   .family-container {
@@ -1737,6 +1768,7 @@ section {
   
   .couple-section {
     padding: 50px 0;
+    background-attachment: scroll;
   }
   
   .couple-container {
@@ -1775,6 +1807,7 @@ section {
   
   .family-section {
     padding: 50px 0;
+    background-attachment: scroll;
   }
   
   .family-container {
@@ -2196,7 +2229,7 @@ section {
           <div class="event-date-time">
             <div class="event-date"><span class="event-emoji">🗓️</span> 14 March 2026</div>
             <div class="event-time"><span class="event-emoji">🕕</span> 6:30 PM Onwards</div>
-            <div class="event-venue"><span class="event-emoji">📍</span> Drupati Lawns, Vaijapur</div>
+            <div class="event-venue"><span class="event-emoji">📍</span> Droupadi Lawns, Vaijapur</div>
           </div>
           <p class="event-description">A cherished pre-wedding ritual filled with joy, laughter, and vibrant turmeric traditions. The auspicious yellow paste is applied to the couple for blessings.</p>
         </div>
@@ -2216,7 +2249,7 @@ section {
           <div class="event-date-time">
             <div class="event-date"><span class="event-emoji">🗓️</span> 14 March 2026</div>
             <div class="event-time"><span class="event-emoji">🕙</span> 10:00 PM Onwards</div>
-            <div class="event-venue"><span class="event-emoji">📍</span> Drupati Lawns, Vaijapur</div>
+            <div class="event-venue"><span class="event-emoji">📍</span> Droupadi Lawns, Vaijapur</div>
           </div>
           <p class="event-description">An electrifying evening of music, dance performances, and entertainment. Join us for spectacular performances by family and friends!</p>
         </div>
@@ -2236,7 +2269,7 @@ section {
           <div class="event-date-time">
             <div class="event-date"><span class="event-emoji">🗓️</span> 15 March 2026</div>
             <div class="event-time"><span class="event-emoji">🕘</span> 9:20 AM</div>
-            <div class="event-venue"><span class="event-emoji">📍</span> Drupati Lawns, Vaijapur</div>
+            <div class="event-venue"><span class="event-emoji">📍</span> Droupadi Lawns, Vaijapur</div>
           </div>
           <p class="event-description">The sacred seven steps around the holy fire where the couple takes seven vows, marking the eternal bond of marriage with divine blessings.</p>
         </div>
@@ -2256,7 +2289,7 @@ section {
           <div class="event-date-time">
             <div class="event-date"><span class="event-emoji">🗓️</span> 15 March 2026</div>
             <div class="event-time"><span class="event-emoji">🕐</span> 12:54 PM Onwards</div>
-            <div class="event-venue"><span class="event-emoji">📍</span> Drupati Lawns, Vaijapur</div>
+            <div class="event-venue"><span class="event-emoji">📍</span> Droupadi Lawns, Vaijapur</div>
           </div>
           <p class="event-description">An elegant evening of celebration, fine dining, music, and unforgettable memories as we begin our new journey together.</p>
         </div>
@@ -2275,7 +2308,7 @@ section {
     
     <div class="location-content">
       <div class="venue-hero fade-in">
-        <h3 class="venue-name">Drupati Lawns, Vaijapur</h3>
+        <h3 class="venue-name">Droupadi Lawns, Vaijapur</h3>
         <p class="venue-tagline">A beautiful venue adorned with elegance and charm</p>
       </div>
       
@@ -2283,7 +2316,7 @@ section {
       <div class="venue-photo-showcase fade-in">
         <img src="photo/venue-photo.jpg" 
              onerror="this.onerror=null; this.src='https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=1200';" 
-             alt="Drupati Lawns Venue" 
+             alt="Droupadi Lawns Venue" 
              loading="lazy">
       </div>
       
@@ -2292,7 +2325,7 @@ section {
           <div class="venue-icon">📍</div>
           <h4 class="venue-info-title">Address</h4>
           <p class="venue-info-text">
-            Drupati Lawns<br>
+            Droupadi Lawns<br>
             Vaijapur, Aurangabad<br>
             Maharashtra, India
           </p>
@@ -2349,7 +2382,7 @@ section {
     <div class="footer-info">
       <div class="footer-info-item">
         <span class="footer-info-icon">📍</span>
-        <span>Drupati Lawns, Vaijapur</span>
+        <span>Droupadi Lawns, Vaijapur</span>
       </div>
       <div class="footer-info-item">
         <span class="footer-info-icon">📅</span>
